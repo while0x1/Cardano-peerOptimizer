@@ -1,4 +1,4 @@
-# peerOptimizer
+# Cardano Topology peerOptimizer
 Filter Peers By Latency and Stake
 
 peerOptimizer allows a Cardano Stake pool operator to generate a custom topology.json file optimising for latency and stake. The create_relay_list() routine in peerOptimise.py has 3 variables which you can configure to generate your desired pool list:
