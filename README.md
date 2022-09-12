@@ -26,5 +26,5 @@ optional arguments:
  
 If you want to propogate transactions quickly to the network the pools which you connect to can be important.
 
-The concept and original two scripts for this tool were conceived and written by STLL pool. COINZ pool contributed to the final version of these scripts by taking the original rough version and refactoring them into more pythonic function driven routines.
+The concept and original two scripts for this tool were conceived and written by STLL pool. COINZ pool contributed to the final version of this tool by taking the original rough version and refactoring it into a more pythonic and user friendly tool.
 
