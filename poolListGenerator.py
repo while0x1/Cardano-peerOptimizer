@@ -50,7 +50,7 @@ def create_pool_list():
         data_payload = {'_pool_bech32_ids': [poolid]}
         json_payload = json.dumps(data_payload)
         #stakequery = "https://api.koios.rest/api/v0/pool_history?_pool_bech32=" + poolid + "&_epoch_no=" + epoch
-        stakequery = "https://api.koios.rest/api/v1/pool_info" + "&_epoch_no=" + epoch
+        stakequery = "https://api.koios.rest/api/v1/pool_info"
         try:
             r = s.post(stakequery,data=json_payload)
             ar += 1
