@@ -47,9 +47,12 @@ def create_pool_list():
     for n in allrelays:
         #print(n)
         poolid = n['pool_id_bech32']
-        stakequery = "https://api.koios.rest/api/v0/pool_history?_pool_bech32=" + poolid + "&_epoch_no=" + epoch
+        data_payload = {'_pool_bech32_ids': [poolid]}
+        json_payload = json.dumps(data_payload)
+        #stakequery = "https://api.koios.rest/api/v0/pool_history?_pool_bech32=" + poolid + "&_epoch_no=" + epoch
+        stakequery = "https://api.koios.rest/api/v1/pool_info" + "&_epoch_no=" + epoch
         try:
-            r = s.get(stakequery)
+            r = s.post(stakequery,data=json_payload)
             ar += 1
             print(f'Remaining Queries: {len(allrelays)-ar}')
             if r.status_code == 200:
