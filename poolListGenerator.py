@@ -11,7 +11,7 @@ filteredrelays = []
 def get_relays(headers):
     try:
         s = requests.Session()
-        r = s.get('https://api.koios.rest/api/v0/pool_relays',headers=headers)
+        r = s.get("https://api.koios.rest/api/v1/pool_list",headers=headers)
         relays = json.loads(r.content)
         #print(r.content)
         for n in relays:
@@ -22,7 +22,7 @@ def get_relays(headers):
 def create_pool_list():
     try:
         s = requests.Session()
-        r = s.get('https://api.koios.rest/api/v0/tip')
+        r = s.get("https://api.koios.rest/api/v1/tip")
         if r.status_code == 200:
             #print(r.content)
             epoch = json.loads(r.content)
